@@ -5,7 +5,7 @@ modules = [
 ]
 
 def calc_fuel(module) :
-	return math.floor(module / 3) - 2
+	return module // 3 - 2
 
 def fuel_per_module(module) :
 	print("module: %s" % (module))
@@ -14,12 +14,10 @@ def fuel_per_module(module) :
 	while fuel > 0:
 		fuel = calc_fuel(fuel)
 		if fuel > 0:
+			print("fuel:", fuel)
 			total_fuel_per_module += fuel
-		print("fuel: %s" % (fuel))
-		print("total_fuel_per_module: %s" % (total_fuel_per_module))
+	print("total_fuel_per_module:", total_fuel_per_module)
 	return total_fuel_per_module
-
-
 
 total_fuel = 0;
 
